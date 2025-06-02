@@ -1,0 +1,49 @@
+
+/*variaveis de padding eixo-y*/
+.py-base{
+  padding-block: var(--py-base); /*16px*/
+}
+
+.py-lg{
+  padding-block: var(--py-lg); /*24px*/
+}
+
+.py-xl{
+  padding-block: var(--py-ba-xl); /*48px*/
+}
+
+.px-lg{
+  padding-inline: var(--px-lg);
+}
+
+
+.container{
+  --max-width: 375px;
+  width: min(var(--max-width), 100% - var(--px-lg) * 2); /* 375px - 24px */ /*escolher tamanho máximo da tela e aplicar o padding proporvionalmente */
+  margin-inline: auto;
+  border: solid violet
+}
+
+.desktop-only{
+  display: none;
+}
+
+.even-colums{
+  display: grid;
+  gap: 1rem;;
+}
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 80 rem; /*larger max-width for larger screens */
+  }
+
+  .desktop-only {
+    display: initial; /*show on larger screens */
+  }
+
+  .even-colums {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+  }
+}
