@@ -1,0 +1,75 @@
+.btn{
+
+  /* Define variáveis internas para cor de fundo e texto do botão */
+  --btn-bg-color: var(--text-color-primary);
+  --btn-color: var(--bg-color);
+
+  border: 0; /* Remove borda padrão */
+  background-color: transparent; /* Garante fundo transparente antes da aplicação de background customizado */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content; /* Largura mínima baseada no conteúdo */
+
+  border-radius: .5rem; /*8px - Cantos arredondados */
+
+  font: var(--fw-md) var(--fs-base)/1.5rem var(--ff-sans); /* Aplica peso, tamanho e família da fonte com altura da linha */
+
+  cursor: pointer; /* Mostra ponteiro de clique */
+
+  background: var(--btn-bg-color); /* Cor de fundo baseada na variável */
+  color: var(--btn-color); /* Cor do texto baseada na variável */
+}
+
+/* cor do botão ao passar o mouse */
+.btn:hover {
+  --btn-bg-color: linear-gradient(
+    90deg,
+    var(--brand-color-secondary) 0%,
+    var(--brand-color-primary) 100%
+  ); /* Aplica um gradiente horizontal de cor no hover */
+
+  --btn-color: var(--surface-color); /* Muda cor do texto ao passar o mouse */
+}
+
+/* Botão pequeno */
+.btn-sm{
+  padding: .5rem 1rem; /*8px 16px - Espaçamento interno */
+  font-size: var(--ff-sm); /* Tamanho de fonte menor */
+}
+
+/* Botão médio */
+.btn-md{
+  padding: .75rem 1.5rem; /*12px 24px - Espaçamento interno */
+  font-size: var(--fs-base); /* Tamanho de fonte base */
+}
+
+/* Botão grande */
+.btn-lg{
+  padding: 1rem 2rem; /*16px 32px - Espaçamento interno */
+  font-size: 1.125rem; /*18px - Fonte maior */
+}
+
+/* Estilo especial para botões com atributo aria-label */
+.btn[aria-label]{
+  position: relative; /* Necessário para posicionamento absoluto dos pseudo-elementos */
+
+  &::before{
+    content:"";
+    position: absolute;
+    border-radius: inherit; /* Mantém o mesmo border-radius do botão */
+    inset: 0.09375rem; /*1.5px - Espaço interno que gera efeito visual ao redor do texto */
+    background-color: var(--bg-color); /* Fundo abaixo do texto para efeito de recorte */
+  }
+
+  &::after{
+    content: attr(aria-label); /* Usa o valor de aria-label como conteúdo do texto */
+    background: var(--btn-bg-color); /* Aplica cor de fundo (pode ser gradiente) */
+    --webkit-background-clip: text;
+    background-clip: text; /* ao invés de deixar um quadrado no texto, faz um recorte conforme o texto */
+    color: transparent; /* Deixa o texto invisível para permitir o efeito de "recorte" com a cor de fundo */
+    position: relative;
+    z-index: 1; /* Garante que o texto esteja acima do fundo */
+  }
+}

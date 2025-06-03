@@ -33,6 +33,18 @@
   gap: 1rem;;
 }
 
+.flex{
+  display: flex;
+}
+
+.gap-1{
+  gap: 1rem; /*16px*/
+}
+
+.grid{
+  display: grid;
+}
+
 @media (width >= 80em) {
   .container {
     --max-width: 80 rem; /*larger max-width for larger screens */
