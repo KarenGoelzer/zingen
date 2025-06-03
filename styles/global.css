@@ -75,6 +75,18 @@ a{
   color: inherit
 }
 
+a:hover{
+  background: linear-gradient(
+    90deg,
+    var(--brand-color-secondary) 0%,
+    var(--brand-color-primary) 100%
+  ); /* Aplica um gradiente horizontal de cor no hover */
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 ul[role="list"]{   /*caso queira tirar a bolinha da lista e manter o padrão de acessibilidade*/
   list-style: none;
 }
