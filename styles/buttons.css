@@ -31,6 +31,10 @@
   ); /* Aplica um gradiente horizontal de cor no hover */
 
   --btn-color: var(--surface-color); /* Muda cor do texto ao passar o mouse */
+
+  -webkit-background-clip: initial; /* Reseta o background-clip para aplicar gradiente */
+  background-clip: initial;
+  color: var(--btn-color); /* Cor do texto baseada na variável */
 }
 
 /* Botão pequeno */
@@ -71,5 +75,20 @@
     color: transparent; /* Deixa o texto invisível para permitir o efeito de "recorte" com a cor de fundo */
     position: relative;
     z-index: 1; /* Garante que o texto esteja acima do fundo */
+  }
+}
+
+
+@media(width >= 80em){
+  /* Botão médio */
+  .btn-sm{
+    padding: .75rem 1.5rem; /*12px 24px - Espaçamento interno */
+    font-size: var(--fs-base); /* Tamanho de fonte base */
+  }
+
+  /* Botão grande */
+  .btn-md{
+    padding: 1rem 2rem; /*16px 32px - Espaçamento interno */
+    font-size: 1.125rem; /*18px - Fonte maior */
   }
 }

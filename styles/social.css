@@ -1,45 +1,47 @@
-
 a.social{
-  --bg-img:"";
-  background-image: var(--bg-img);
-  width: 1.5rem;
-  height: 1.5rem;
-  display: block;
+  --bg-img:""; /* Variável CSS para armazenar o caminho da imagem de fundo */
+
+  background-image: var(--bg-img); /* Define a imagem de fundo com base na variável */
+  width: 1.5rem;  /* Largura do ícone (24px) */
+  height: 1.5rem; /* Altura do ícone (24px) */
+  display: block; /* Permite definir dimensões e aplicar imagem de fundo */
 
   -webkit-background-clip: initial;
-  background-clip: initial;
+  background-clip: initial; /* Garante que o recorte da imagem de fundo não seja alterado */
 
+  /* Ícone específico para TikTok */
   &[aria-label="tiktok"] {
-  --bg-img: url('../assets/icons/tiktok.svg');
+    --bg-img: url('../assets/icons/tiktok.svg'); /* Caminho do ícone padrão do TikTok */
 
     &:hover {
-    --bg-img: url('../assets/icons/tiktok-hover.svg');
+      --bg-img: url('../assets/icons/tiktok-hover.svg'); /* Ícone alterado no hover */
     }
   }
 
+  /* Ícone específico para Instagram */
   &[aria-label="instagram"] {
-  --bg-img: url('../assets/icons/instagram.svg');
+    --bg-img: url('../assets/icons/instagram.svg'); /* Caminho do ícone padrão do Instagram */
 
     &:hover {
-    --bg-img: url('../assets/icons/instagram-hover.svg');
+      --bg-img: url('../assets/icons/instagram-hover.svg'); /* Ícone alterado no hover */
     }
   }
 
+  /* Ícone específico para Twitter */
   &[aria-label="twitter"] {
-  --bg-img: url('../assets/icons/twitter.svg');
+    --bg-img: url('../assets/icons/twitter.svg'); /* Caminho do ícone padrão do Twitter */
 
     &:hover {
-    --bg-img: url('../assets/icons/twitter-hover.svg');
+      --bg-img: url('../assets/icons/twitter-hover.svg'); /* Ícone alterado no hover */
     }
   }
 
+  /* Ícone específico para Discord */
   &[aria-label="discord"] {
-  --bg-img: url('../assets/icons/discord.svg');
+    --bg-img: url('../assets/icons/discord.svg'); /* Caminho do ícone padrão do Discord */
 
     &:hover {
-    --bg-img: url('../assets/icons/discord-hover.svg');
+      --bg-img: url('../assets/icons/discord-hover.svg'); /* Ícone alterado no hover */
     }
   }
 }
-
-

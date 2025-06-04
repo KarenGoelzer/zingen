@@ -9,7 +9,7 @@
 }
 
 .py-xl{
-  padding-block: var(--py-ba-xl); /*48px*/
+  padding-block: var(--py-xl); /*48px*/
 }
 
 .px-lg{
@@ -37,8 +37,16 @@
   display: flex;
 }
 
+.items-center{
+  align-items: center;
+}
+
 .gap-1{
   gap: 1rem; /*16px*/
+}
+
+.gap-1\.5{
+  gap: 1.5rem; /*24px*/
 }
 
 .grid{
@@ -47,7 +55,7 @@
 
 @media (width >= 80em) {
   .container {
-    --max-width: 80 rem; /*larger max-width for larger screens */
+    --max-width: 80rem; /*larger max-width for larger screens */
   }
 
   .desktop-only {
