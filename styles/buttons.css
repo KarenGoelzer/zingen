@@ -70,7 +70,7 @@
   &::after{
     content: attr(aria-label); /* Usa o valor de aria-label como conteúdo do texto */
     background: var(--btn-bg-color); /* Aplica cor de fundo (pode ser gradiente) */
-    --webkit-background-clip: text;
+    -webkit-background-clip: text;
     background-clip: text; /* ao invés de deixar um quadrado no texto, faz um recorte conforme o texto */
     color: transparent; /* Deixa o texto invisível para permitir o efeito de "recorte" com a cor de fundo */
     position: relative;

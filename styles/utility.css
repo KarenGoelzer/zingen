@@ -21,7 +21,6 @@
   --max-width: 375px;
   width: min(var(--max-width), 100% - var(--px-lg) * 2); /* 375px - 24px */ /*escolher tamanho máximo da tela e aplicar o padding proporvionalmente */
   margin-inline: auto;
-  border: solid violet
 }
 
 .desktop-only{
