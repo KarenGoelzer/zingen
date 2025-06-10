@@ -63,7 +63,7 @@
     content:"";
     position: absolute;
     border-radius: inherit; /* Mantém o mesmo border-radius do botão */
-    inset: 0.09375rem; /*1.5px - Espaço interno que gera efeito visual ao redor do texto */
+    inset: 1px; /*1.5px - Espaço interno que gera efeito visual ao redor do texto */
     background-color: var(--bg-color); /* Fundo abaixo do texto para efeito de recorte */
   }
 
